@@ -9,7 +9,7 @@ MAX_LOG_ENTRIES = 30
 MAX_METRIC_ENTRIES = 20
 MAX_TRACE_ENTRIES = 15
 
-
+#Take database evidence records and convert them into organized text summaries for the LLM.
 def format_evidence_for_llm(evidence_rows: list) -> dict[str, str]:
     """Convert stored Evidence ORM rows into grouped text summaries.
 

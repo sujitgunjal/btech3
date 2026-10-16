@@ -1,10 +1,10 @@
 [
   {
     "incident_id": "INC-004",
-    "db_id": 27,
+    "db_id": 38,
     "status": "completed",
-    "confidence": 1.0,
-    "evidence_count": 637,
+    "confidence": 0.7,
+    "evidence_count": 935,
     "rca_valid": true,
     "validation_issues": [],
     "evaluation": {
@@ -13,8 +13,8 @@
       "expected_service": "order-service",
       "expected_root_cause": "A bounded CPU burn workload saturated the order-service container.",
       "rca_produced": true,
-      "rca_root_cause": "An intentional CPU fault was injected into the order-service, causing worker threads to saturate the CPU.",
-      "rca_confidence": 1.0,
+      "rca_root_cause": "The order-service experienced a critical CPU saturation event, reaching peak usage of 1.0276, which coincided with increased request latency for the POST /orders endpoint.",
+      "rca_confidence": 0.7,
       "rca_affected_services": [
         "order-service"
       ],
@@ -28,6 +28,6 @@
         "INC-004"
       ]
     },
-    "elapsed_seconds": 10.882656574249268
+    "elapsed_seconds": 10.224430799484253
   }
 ]
